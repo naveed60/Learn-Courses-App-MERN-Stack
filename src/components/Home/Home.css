@@ -1,5 +1,26 @@
 .container {
-    height: 10vh;
-    padding: 1rem;
+    height: 100vh;
+    padding: 5rem;
     box-sizing: border-box;
+}
+.vector-graphics {
+    filter: drop-shadow(0 40px 10px rgb(140, 140, 129));
+    animation: vectorAnimation 1s infinite ease-in-out alternate;
+}
+
+@keyframes vectorAnimation {
+   to {
+    transform: translateY(-10px);
+    }
+}
+
+.brandsBanner > svg {
+    color: aliceblue;
+    font-size: 3rem;
+    transition: color 0.5s;
+
+}
+.brandsBanner > svg:hover {
+    color: chocolate;
+
 }
