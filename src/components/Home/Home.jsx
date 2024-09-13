@@ -5,6 +5,7 @@ import vg from "../../assets/images/bg8.png";
 import {CgGoogle,CgYoutube} from "react-icons/cg";
 import {SiCoursera, SiUdemy} from 'react-icons/si';
 import {DiAws} from "react-icons/di";
+import introVideo from '../../assets/videos/intro.mp4'
 
 function Home() {
   return (
@@ -18,7 +19,7 @@ function Home() {
           spacing={["16","56"]}
           >
           <VStack width={"full"} alignItems={["center","flex-center"]}>
-            <Heading children="MERN STACK LEARNING" />
+            <Heading children="ONLINE COURSES LEARNING" />
             <Text children="Find very impressive content to learn new technologies"/>
             <Link to="/courses"/>
             <Button size={"lg"} colorScheme='yellow'>
@@ -38,6 +39,16 @@ function Home() {
           <DiAws/>
         </HStack>
       </Box>
+      <div className="container2">
+        <video 
+        autoPlay 
+        controls
+        controlsList='nodownload nofullscreen noremoteplayback'
+        disablePictureInPicture
+        disableRemotePlayback
+        src={introVideo}>
+        </video>
+      </div>
     </section>
   )
 }
