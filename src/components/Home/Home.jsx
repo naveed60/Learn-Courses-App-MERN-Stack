@@ -18,9 +18,11 @@ function Home() {
           alignItems="center"
           spacing={["16","56"]}
           >
-          <VStack width={"full"} alignItems={["center","flex-center"]}>
-            <Heading children="ONLINE COURSES LEARNING" />
-            <Text children="Find very impressive content to learn new technologies"/>
+          <VStack width={"full"} alignItems={["center","flex-center"]} spacing={'6'}>
+            <Heading textAlign={['center','left']} children="ONLINE COURSES LEARNING" />
+            <Text 
+            textAlign={['center','left']}
+            children="Find very impressive content to learn new technologies"/>
             <Link to="/courses"/>
             <Button size={"lg"} colorScheme='yellow'>
             Explore Now
