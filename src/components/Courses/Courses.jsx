@@ -1,11 +1,69 @@
 import { Button, Container, Heading, HStack, Input,Stack,Text, VStack,Image } from '@chakra-ui/react';
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
+import { addToPlaylist } from '../../redux/actions/profile';
 
-const Course = ({views,title,imageSrc,id,addToPlaylisthandler,creator,description,lectureCount})=> {
+const Course = ({
+  views,
+  title,
+  imageSrc,
+  id,
+  addToPlaylistHandler,
+  creator,
+  description,
+  lectureCount,
+  loading,
+})=> {
 return (
     <VStack className='course' alignItems={['center','flex-start']}>
       <Image src={imageSrc} boxSize='60' objectFit='contain' />
-      <Heading />
+      <Heading 
+       textAlign={['center', 'left']}
+       maxW="200px"
+       size={'sm'}
+       fontFamily={'sans-serif'}
+       noOfLines={3}
+       children={title}
+      />
+       <Text noOfLines={2} children={description} />
+
+        <HStack>
+          <Text
+            fontWeight={'bold'}
+            textTransform="uppercase"
+            children={'Creator'}
+          />
+
+          <Text
+            fontFamily={'body'}
+            textTransform="uppercase"
+            children={creator}
+          />
+        </HStack>
+        <Heading
+        textAlign={'center'}
+        size="xs"
+        children={`Lectures - ${lectureCount}`}
+        textTransform="uppercase"
+      />
+      <Heading
+        size="xs"
+        children={`Views - ${views}`}
+        textTransform="uppercase"
+      />
+      <Stack direction={['column', 'row']} alignItems="center">
+        <Link to={`/course/${id}`}>
+          <Button colorScheme={'yellow'}>Watch Now</Button>
+        </Link>
+        <Button
+          isLoading={loading}
+          variant={'ghost'}
+          colorScheme={'yellow'}
+          onClick={() => addToPlaylistHandler(id)}
+        >
+          Add to playlist
+        </Button>
+      </Stack>
     </VStack>
 )
 }
