@@ -77,6 +77,10 @@ const Courses = () => {
         'Data Structure and Algo',
         'App development',
     ]
+
+    const addToPlaylistHandler = async couseId => {
+      console.log(addToPlaylistHandler)
+    };
   return (
     <Container minHeight={'95vh'} maxWidth={'container.lg'} padding={'8'}>
         <Heading children={'All Courses'} m={'8'}/>
@@ -117,10 +121,11 @@ const Courses = () => {
         title={'Sample1'}
         description={'Sample1'}
         views={23}
-        imageSrc={'Sample1'}
+        imageSrc={'https://media.istockphoto.com/id/1341466569/vector/people-create-different-quality-content-for-social-media-copywriter-with-pencil-writes.jpg?s=2048x2048&w=is&k=20&c=VhI-pcvIWdw1hy5beAI18IZWN2atRYS2chTU7ofDDhw='}
         id={'Sample1'}
         creator={'Sample1 boy'}
         lectureCount={2}
+        addToPlaylistHandler={addToPlaylistHandler}
         />
     </Container>
    
