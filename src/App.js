@@ -8,7 +8,7 @@ import Login from './components/Auth/Login';
 import Register from './components/Auth/Register';
 import ForgetPassword from './components/Auth/ForgetPassword';
 import ResetPassword from './components/Auth/ResetPassword';
-import Contact from './components/Contact /Contact';
+import Contact from './components/Contact/Contact';
 import About from './components/About/About';
 import Subscribe from './components/Payments/Subscribe';
 import PaymentSuccess from './components/Payments/PaymentSucces';
