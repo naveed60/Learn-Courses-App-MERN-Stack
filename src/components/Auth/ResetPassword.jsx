@@ -27,7 +27,7 @@ const ResetPassword = () => {
     if (params) {
       toast.success(params);
     //   dispatch({ type: 'clearMessage' });
-      navigate('/login');
+      navigate('/resetpassword');
     }
   }, []);
 
